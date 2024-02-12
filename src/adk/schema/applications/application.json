@@ -1,77 +1,14 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "title": {
-        "type": "string"
-      },
-      "description": {
-        "type": "string"
-      },
-      "values": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+        "oneOf": [
+            {
+                "$ref": "file:/applications/application_input_number.json"
             },
-            "default_value": {
-              "type": [
-                "string",
-                "number"
-              ]
-            },
-            "minimum_value": {
-              "type": [
-                "string",
-                "number"
-              ]
-            },
-            "maximum_value": {
-              "type": [
-                "string",
-                "number"
-              ]
-            },
-            "unit": {
-              "type": "string"
-            },
-            "scale_value": {
-              "type": [
-                "string",
-                "number"
-              ]
+            {
+                "$ref": "file:/applications/application_input_string.json"
             }
-          },
-          "required": [
-            "name",
-            "default_value",
-            "minimum_value",
-            "maximum_value",
-            "unit",
-            "scale_value"
-          ]
-        }
-      },
-      "input_type": {
-        "type": "string"
-      },
-      "roles": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      }
-    },
-    "required": [
-      "title",
-      "description",
-      "values",
-      "input_type",
-      "roles"
-    ]
-  }
+        ]
+    }
 }

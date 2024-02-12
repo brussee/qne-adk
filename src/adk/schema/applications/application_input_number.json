@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "values": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/input_number"
+            }
+        },
+        "input_type": {
+            "enum": [
+                "number",
+                "int",
+                "float",
+                "double",
+                "long"
+            ]
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "title",
+        "description",
+        "values",
+        "input_type",
+        "roles"
+    ],
+    "definitions": {
+        "input_number": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "default_value": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "minimum_value": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "maximum_value": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "unit": {
+                    "type": "string"
+                },
+                "scale_value": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "default_value",
+                "minimum_value",
+                "maximum_value",
+                "unit",
+                "scale_value"
+            ]
+        }
+    }
+}
