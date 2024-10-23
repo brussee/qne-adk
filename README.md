@@ -46,7 +46,7 @@ To install all the required packages, execute the following command:
 pip install qne-adk
 ```
 
-After installing the qne-adk, you can install SquidASM. Replace `${NETSQUIDPYPI_USER}` and `${NETSQUIDPYPI_PWD}` with the username and password you registered on [NetSquid](https://forum.netsquid.org/):
+After installing the qne-adk, you can install [SquidASM](https://github.com/QuTech-Delft/squidasm). Replace `${NETSQUIDPYPI_USER}` and `${NETSQUIDPYPI_PWD}` with the username and password you registered on [NetSquid](https://forum.netsquid.org/):
 
 ```
 pip install squidasm==0.12.1 --extra-index-url=https://${NETSQUIDPYPI_USER}:${NETSQUIDPYPI_PWD}@pypi.netsquid.org
