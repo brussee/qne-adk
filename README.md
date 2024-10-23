@@ -46,10 +46,10 @@ To install all the required packages, execute the following command:
 pip install qne-adk
 ```
 
-After installing the qne-adk, you can install SquidASM. Replace '{netsquid-user-name}' and '{netsquid-password}' with the credentials you registered on [NetSquid](https://forum.netsquid.org/):
+After installing the qne-adk, you can install SquidASM. Replace `${NETSQUIDPYPI_USER}` and `${NETSQUIDPYPI_PWD}` with the username and password you registered on [NetSquid](https://forum.netsquid.org/):
 
 ```
-pip install squidasm==0.12.1 --extra-index-url=https://{netsquid-user-name}:{netsquid-password}@pypi.netsquid.org
+pip install squidasm==0.12.1 --extra-index-url=https://${NETSQUIDPYPI_USER}:${NETSQUIDPYPI_PWD}@pypi.netsquid.org
 ```
 
 Now everything should be setup and ready in order to create your own applications and experiments and run them on the simulator!
